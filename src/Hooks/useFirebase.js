@@ -28,7 +28,9 @@ const useFirebase = () => {
             .catch( error => {
                 setError( error.message );
             } )
-            .finally( () => setIsLoading( false ) );
+            .finally( () => {
+                setIsLoading( false );
+            } );
     }
 
     //Set the observer on auth object to get the current user status on real-time
