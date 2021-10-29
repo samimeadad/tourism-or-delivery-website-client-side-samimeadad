@@ -1,9 +1,10 @@
 import React from 'react';
-import { Dropdown, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 const DatePicker = () => {
     return (
         <div className="container my-5 w-50">
+            <hr />
             <Form className="d-flex justify-content-around">
                 <div>
                     <Form.Label className="fw-bold">Check-In</Form.Label>
@@ -43,6 +44,7 @@ const DatePicker = () => {
                 </div>
                 <input type="submit" value="Check Availability" className="btn btn-primary ms-5 px-3 py-2" />
             </Form>
+            <hr />
         </div >
     );
 };

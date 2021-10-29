@@ -1,17 +1,19 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
 import useRooms from '../../Hooks/useRooms';
-import Room from './Room/Room';
+import Room from '../Rooms/Room/Room';
 
-const Rooms = () => {
+const PremiumRooms = () => {
     const [ rooms ] = useRooms();
+    const premiumRooms = rooms.filter( room => room.premium === true );
+    console.log( premiumRooms );
 
     return (
         <Row className="container mx-auto my-5">
-            <h1 className=" text-center fw-bold text-primary">Our Rooms</h1>
+            <h1 className=" text-center fw-bold text-primary">Our Premium Rooms</h1>
             <Row className="g-4">
                 {
-                    rooms.map( room => <Room
+                    premiumRooms.map( room => <Room
                         key={ room.key }
                         room={ room }>
                     </Room> )
@@ -22,4 +24,4 @@ const Rooms = () => {
     );
 };
 
-export default Rooms;
+export default PremiumRooms;

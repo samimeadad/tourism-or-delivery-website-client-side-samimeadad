@@ -3,9 +3,12 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import useAuth from '../../Hooks/useAuth';
 
 const Header = () => {
+    const { user, logout } = useAuth();
+
     return (
         <header className="header bg-dark">
             <Navbar collapseOnSelect expand="lg" className="nav navbar py-5 px-5" bg="light" variant="dark">
@@ -32,12 +35,12 @@ const Header = () => {
                     </Nav>
 
                     {/* login and signup section with conditional rendering*/ }
-                    {/* <Nav className="p-3">
+                    <Nav className="p-3">
                         {
-                            !user.email ? <span><NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink><NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink></span> :
+                            !user.email ? <span><NavLink className="me-3 text-primary text-decoration-none fw-bold" to="/login">Please Login Here <FontAwesomeIcon icon={ faSignInAlt } /></NavLink></span> :
                                 <button className="btn btn-info border border-danger me-2" onClick={ logout }>Log out: <span className="fw-bold text-danger">{ user?.email }</span></button>
                         }
-                    </Nav> */}
+                    </Nav>
                 </Navbar.Collapse>
             </Navbar>
         </header >
