@@ -38,7 +38,7 @@ const Header = () => {
                     <Nav className="p-3">
                         {
                             !user.email ? <span><NavLink className="me-3 text-primary text-decoration-none fw-bold" to="/login">Please Login Here <FontAwesomeIcon icon={ faSignInAlt } /></NavLink></span> :
-                                <button className="btn btn-info border border-danger me-2" onClick={ logout }>Log out: <span className="fw-bold text-danger">{ user?.email }</span></button>
+                                <button className="btn btn-success border me-2" onClick={ logout }>Log out: <span className="fw-bold text-light">{ user?.email }</span></button>
                         }
                     </Nav>
                 </Navbar.Collapse>

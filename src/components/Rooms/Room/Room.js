@@ -19,7 +19,7 @@ const Room = ( props ) => {
                     <hr />
                     <h4 className="card-text text-danger fw-bold">BDT. { price }</h4>
                     <hr />
-                    <Link to={ `/treatment/${ key }` }><Button className="btn btn-primary">Details</Button></Link>
+                    <Link to={ `/room/${ key }` }><Button className="btn btn-primary">Details</Button></Link>
                 </div>
             </div>
         </Col>

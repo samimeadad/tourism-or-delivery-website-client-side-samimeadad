@@ -20,9 +20,8 @@ const Login = () => {
                         <hr className="text-danger" />
                         <button onClick={ signInUsingGoogle } className="my-3 btn btn-success"> Login With Google</button>
                         <hr className="text-danger" />
-                        {/* render the messages on the UI conditionally */ }
                         {
-                            !error ? <div className="row mt-3 text-danger">{ error }</div> : <div className="row mt-3 text-success">Login Successful</div>
+                            !error ? <div className="row mt-3 text-danger">{ error }</div> : <div className="row mt-3 text-success">Logout Successful</div>
                         }
                     </div>
                 </Col>

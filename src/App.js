@@ -13,6 +13,8 @@ import Restaurants from './components/Restaurants/Restaurants';
 import Events from './components/Events/Events';
 import Gallery from './components/Gallery/Gallery';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PrivateRoom from './components/Rooms/Room/PrivateRoom';
 
 function App () {
   return (
@@ -33,6 +35,9 @@ function App () {
             <Route exact path="/rooms">
               <Rooms></Rooms>
             </Route>
+            <PrivateRoute exact path="/room/:roomId">
+              <PrivateRoom></PrivateRoom>
+            </PrivateRoute>
             <Route exact path="/facilities">
               <Facilities></Facilities>
             </Route>
