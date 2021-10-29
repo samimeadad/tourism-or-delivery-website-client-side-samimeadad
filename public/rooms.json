@@ -5,7 +5,7 @@
         "description": "The room size 1,300 sft with 01 living room 01 dining , 01 office room and 02 bed room with well amenities and interior, bathtub in washrooms.",
         "price": "90,000",
         "premium": true,
-        "image": "http://www.oceanparadisehotel.com/storage/rooms/room_041220191575456091.jpg"
+        "image": "https://i.ibb.co/rvHfw1j/presidential-suit.jpg"
     },
     {
         "key": "2",
@@ -13,7 +13,7 @@
         "description": "The room size 650 sft with 01 living room and 01 bed room with well amenities and interior, Handicraft furniture’s in room, bathtub in washrooms, the ocean are visible from the Balcony.",
         "price": "35,000",
         "premium": true,
-        "image": "http://www.oceanparadisehotel.com/storage/rooms/room_241220191577176088.jpg"
+        "image": "https://i.ibb.co/VBYv1Qc/creative-studio.jpg"
     },
     {
         "key": "3",
@@ -21,7 +21,7 @@
         "description": "The room size 650 sft with 01 living room and 01 bed room with well amenities and interior, bathtub in washrooms, the ocean are visible from the rooms and from the Balcony.",
         "price": "20,000",
         "premium": true,
-        "image": "http://www.oceanparadisehotel.com/storage/rooms/room_301220191577697301.jpg"
+        "image": "https://i.ibb.co/wwmXXCv/executive-suit.jpg"
     },
     {
         "key": "4",
@@ -29,7 +29,7 @@
         "description": "The room size is 550 sft with well amenities and interior, bathtub in washrooms and the Ocean is visible from the balcony & rooms.",
         "price": "15,000",
         "premium": false,
-        "image": "http://www.oceanparadisehotel.com/storage/rooms/room_301220191577697709.jpg"
+        "image": "https://i.ibb.co/mXjy0DD/junior-suit.jpg"
     },
     {
         "key": "5",
@@ -37,7 +37,7 @@
         "description": "The room size 550 sft with well decorated amenities and interior, bathtub in washrooms, the ocean is visible from the rooms",
         "price": "24,000",
         "premium": true,
-        "image": "http://www.oceanparadisehotel.com/storage/rooms/room_301220191577697819.jpg"
+        "image": "https://i.ibb.co/K0jJx4S/honeymoon-suit.jpg"
     },
     {
         "key": "6",
@@ -45,7 +45,7 @@
         "description": "The room size is 390 sft with well amenities and interior, bathtub in wash rooms and a partial view of the ocean from the balcony.",
         "price": "15,000",
         "premium": true,
-        "image": "http://www.oceanparadisehotel.com/storage/rooms/room_1575455308.jpg"
+        "image": "https://i.ibb.co/hRVp02P/executive-premier-deluxe.jpg"
     },
     {
         "key": "7",
@@ -53,7 +53,7 @@
         "description": "The room size is 390 sft with well amenities and interior, bathtub in wash rooms and super view of the ocean from balcony.",
         "price": "11,000",
         "premium": false,
-        "image": "http://www.oceanparadisehotel.com/storage/rooms/room_301220191577698244.jpg"
+        "image": "https://i.ibb.co/yg51kKX/premier-deluxe.jpg"
     },
     {
         "key": "8",
@@ -61,7 +61,7 @@
         "description": "The room size is 390 sft with well amenities and interior, bathtub in wash room and the ocean is visible from the balcony.",
         "price": "12,000",
         "premium": true,
-        "image": "http://www.oceanparadisehotel.com/storage/rooms/room_301220191577698486.jpg"
+        "image": "https://i.ibb.co/GCbRjR6/superior-deluxe.jpg"
     },
     {
         "key": "9",
@@ -69,6 +69,6 @@
         "description": "The room size is 315 sft with well amenities and interior, no bathtub and a partial view of the ocean from the balcony.",
         "price": "10,000",
         "premium": false,
-        "image": "http://www.oceanparadisehotel.com/storage/rooms/room_301220191577698657.jpg"
+        "image": "https://i.ibb.co/HDfkWLv/deluxe.jpg"
     }
 ]
