@@ -5,7 +5,7 @@ const useRooms = () => {
     const [ rooms, setRooms ] = useState( [] );
 
     useEffect( () => {
-        fetch( 'http://localhost:5000/rooms' )
+        fetch( 'https://guarded-peak-27154.herokuapp.com/rooms' )
             .then( res => res.json() )
             .then( data => setRooms( data ) );
     }, [] );
