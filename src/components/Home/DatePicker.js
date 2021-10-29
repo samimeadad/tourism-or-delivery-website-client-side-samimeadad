@@ -2,10 +2,14 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 
 const DatePicker = () => {
+    const handleCheckAvailability = ( e ) => {
+        e.preventDefault();
+    }
+
     return (
         <div className="container my-5 w-50">
             <hr />
-            <Form className="d-flex justify-content-around">
+            <Form className="d-flex justify-content-around" onSubmit={ handleCheckAvailability }>
                 <div>
                     <Form.Label className="fw-bold">Check-In</Form.Label>
                     <Form.Control type="date" />

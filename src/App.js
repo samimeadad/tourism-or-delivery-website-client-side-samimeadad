@@ -15,6 +15,7 @@ import Gallery from './components/Gallery/Gallery';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PrivateRoom from './components/Rooms/Room/PrivateRoom';
+require( 'dotenv' ).config();
 
 function App () {
   return (
