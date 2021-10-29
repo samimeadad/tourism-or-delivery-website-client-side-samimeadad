@@ -10,7 +10,7 @@ const PremiumRooms = () => {
 
     return (
         <Row className="container mx-auto my-5">
-            <h1 className=" text-center fw-bold text-primary">Our Premium Rooms</h1>
+            <h1 className=" text-center fw-bold text-dark">Our Premium Rooms</h1>
             <Row className="g-4">
                 {
                     premiumRooms.map( room => <Room
@@ -19,7 +19,6 @@ const PremiumRooms = () => {
                     </Room> )
                 }
             </Row>
-            <hr className="mx-2 my-5 text-info" />
         </Row >
     );
 };

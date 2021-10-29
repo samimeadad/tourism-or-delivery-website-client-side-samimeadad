@@ -15,7 +15,7 @@ const Room = ( props ) => {
                     <hr />
                     <h2 className="card-title fw-bold text-primary">{ type }</h2>
                     <hr />
-                    <p className="card-text">{ description.slice( 0, 150 ) }</p>
+                    <p className="card-text">{ description.slice( 0, 100 ) }</p>
                     <hr />
                     <h4 className="card-text text-danger fw-bold">BDT. { price }</h4>
                     <hr />
