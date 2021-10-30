@@ -9,13 +9,13 @@ import Login from './components/Login/Login';
 import Contact from './components/Contact/Contact';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Facilities from './components/Facilities/Facilities';
-import Restaurants from './components/Restaurants/Restaurants';
-import Events from './components/Events/Events';
 import Gallery from './components/Gallery/Gallery';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PrivateRoom from './components/Rooms/Room/PrivateRoom';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import MyBookings from './components/MyBookings/MyBookings';
+import ManageBookings from './components/ManageBookings/ManageBookings';
 require( 'dotenv' ).config();
 
 function App () {
@@ -43,14 +43,14 @@ function App () {
             <PrivateRoute exact path="/placeOrder">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
+            <PrivateRoute exact path="/myBookings">
+              <MyBookings></MyBookings>
+            </PrivateRoute>
+            <PrivateRoute exact path="/manageBookings">
+              <ManageBookings></ManageBookings>
+            </PrivateRoute>
             <Route exact path="/facilities">
               <Facilities></Facilities>
-            </Route>
-            <Route exact path="/restaurants">
-              <Restaurants></Restaurants>
-            </Route>
-            <Route exact path="/events">
-              <Events></Events>
             </Route>
             <Route exact path="/gallery">
               <Gallery></Gallery>

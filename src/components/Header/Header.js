@@ -28,8 +28,6 @@ const Header = () => {
                         <NavLink className="me-3 text-light text-decoration-none" to="/about">About Us</NavLink>
                         <NavLink className="me-3 text-light text-decoration-none" to="/rooms">Rooms & Suits</NavLink>
                         <NavLink className="me-3 text-light text-decoration-none" to="/facilities">Facilities & Services</NavLink>
-                        <NavLink className="me-3 text-light text-decoration-none" to="/restaurants">Restaurants</NavLink>
-                        <NavLink className="me-3 text-light text-decoration-none" to="/events">Excursion & Events</NavLink>
                         <NavLink className="me-3 text-light text-decoration-none" to="/gallery">Gallery</NavLink>
                         <NavLink className="me-3 text-light text-decoration-none" to="/contact">Contact Us</NavLink>
                     </Nav>
@@ -38,7 +36,11 @@ const Header = () => {
                     <Nav className="p-3">
                         {
                             !user.email ? <span><NavLink className="me-3 text-primary text-decoration-none fw-bold" to="/login">Please Login Here <FontAwesomeIcon icon={ faSignInAlt } /></NavLink></span> :
-                                <button className="btn btn-success border me-2" onClick={ logout }>Log out: <span className="fw-bold text-light">{ user?.email }</span></button>
+                                <div>
+                                    <span><NavLink className="me-3 text-warning text-decoration-none fw-bold" to="/myBookings">My Bookings</NavLink></span>
+                                    <span><NavLink className="me-3 text-warning text-decoration-none fw-bold" to="/manageBookings">Manage Bookings</NavLink></span>
+                                    <button className="btn btn-success border me-2" onClick={ logout }>Log out: <span className="fw-bold text-light">{ user?.email }</span></button>
+                                </div>
                         }
                     </Nav>
                 </Navbar.Collapse>

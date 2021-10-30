@@ -28,7 +28,7 @@ const Login = () => {
                     <div className="container mt-5">
                         <h3 className="text-primary fw-bold">Please Login with Your Google Account</h3>
                         <hr className="text-danger" />
-                        <button onClick={ signInWithRedirect } className="my-3 btn btn-success px-5 py-3"> Login With Google</button>
+                        <button onClick={ signInWithRedirect } className="my-3 btn btn-success px-5 py-3">Login With Google <i class="fab fa-google"></i></button>
                         <hr className="text-danger" />
                         {
                             !error ? <div className="row mt-3 text-danger">{ error }</div> : <div className="row mt-3 text-success">Logout Successful</div>

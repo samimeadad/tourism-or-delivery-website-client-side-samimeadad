@@ -1,18 +1,20 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import placeOrderImage from '../../images/place-order.png';
 import useAuth from '../../Hooks/useAuth';
+import { useHistory } from 'react-router-dom';
 
 const PlaceOrder = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const { user } = useAuth();
+    const navigation = useHistory();
     const onSubmit = data => console.log( data );
     console.log( watch( "order" ) );
 
     return (
         <div className="container my-5">
-            <h1 className="text-center text-primary mb-5">Place Order</h1>
+            <h1 className=" text-center fw-bold text-primary">Book the Room</h1>
             <Row>
                 <Col xs={ 12 } sm={ 12 } md={ 7 } lg={ 7 }>
                     <img src={ placeOrderImage } alt="placeOrderImage" className="img-fluid" />
@@ -36,6 +38,7 @@ const PlaceOrder = () => {
                         <input placeholder="Phone Number" { ...register( "phone", { required: true } ) } />
                         <br />
                         <br />
+                        <Button className="btn btn-danger me-3" onClick={ () => navigation.goBack() }>Go Back</Button>
                         <input type="submit" className="btn btn-success" />
                         <br />
                         <br />
