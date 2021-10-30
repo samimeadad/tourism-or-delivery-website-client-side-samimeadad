@@ -17,6 +17,7 @@ import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import MyBookings from './components/MyBookings/MyBookings';
 import ManageAllRooms from './components/ManageAllRooms/ManageAllRooms';
 import AddRoom from './components/AddRoom/AddRoom';
+import UpdateRoom from './components/Rooms/UpdateRoom/UpdateRoom';
 
 require( 'dotenv' ).config();
 
@@ -54,6 +55,9 @@ function App () {
             <PrivateRoute exact path="/addRoom">
               <AddRoom></AddRoom>
             </PrivateRoute>
+            <Route path="/rooms/update/:roomId">
+              <UpdateRoom></UpdateRoom>
+            </Route>
             <Route exact path="/facilities">
               <Facilities></Facilities>
             </Route>

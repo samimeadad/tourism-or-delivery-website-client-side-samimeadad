@@ -2,6 +2,7 @@ import { Button, Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import useRooms from '../../Hooks/useRooms';
+import { Link } from 'react-router-dom';
 
 const ManageAllRooms = () => {
     const [ rooms, setRooms ] = useRooms();
@@ -17,9 +18,10 @@ const ManageAllRooms = () => {
                 .then( res => res.json() )
                 .then( data => {
                     if ( data.deletedCount > 0 ) {
-                        alert( 'Room Data Deleted Successfully' );
                         const remainingRooms = rooms.filter( room => parseInt( room._id ) !== parseInt( id ) );
                         setRooms( remainingRooms );
+                        alert( 'Room Data Deleted Successfully' );
+                        window.location.reload( false );
                     }
                 } )
         }
@@ -33,7 +35,7 @@ const ManageAllRooms = () => {
                     <thead>
                         <tr>
                             <th>Room Type</th>
-                            <th>Edit the Room Details</th>
+                            <th>Edit the Status</th>
                             <th>Remove the Room</th>
                         </tr>
                     </thead>
@@ -41,7 +43,7 @@ const ManageAllRooms = () => {
                         {
                             rooms.map( room => <tr>
                                 <td>{ room.type }</td>
-                                <td><Button className="btn btn-success ms-3"><FontAwesomeIcon icon={ faEdit } /></Button></td>
+                                <td><Link to={ `/rooms/update/${ room._id }` }><Button className="btn btn-success ms-3"><FontAwesomeIcon icon={ faEdit } /></Button></Link></td>
                                 <td><Button onClick={ () => handleDeleteRoom( room._id ) } className="btn btn-danger ms-3"><FontAwesomeIcon icon={ faTrash } /></Button></td>
                             </tr> )
                         }
