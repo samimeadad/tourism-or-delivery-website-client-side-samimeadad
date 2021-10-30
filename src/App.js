@@ -55,9 +55,9 @@ function App () {
             <PrivateRoute exact path="/addRoom">
               <AddRoom></AddRoom>
             </PrivateRoute>
-            <Route path="/rooms/update/:roomId">
+            <PrivateRoute path="/rooms/update/:roomId">
               <UpdateRoom></UpdateRoom>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/facilities">
               <Facilities></Facilities>
             </Route>
