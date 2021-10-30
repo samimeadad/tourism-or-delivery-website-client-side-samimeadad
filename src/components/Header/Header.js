@@ -38,7 +38,8 @@ const Header = () => {
                             !user.email ? <span><NavLink className="me-3 text-primary text-decoration-none fw-bold" to="/login">Please Login Here <FontAwesomeIcon icon={ faSignInAlt } /></NavLink></span> :
                                 <div>
                                     <span><NavLink className="me-3 text-warning text-decoration-none fw-bold" to="/myBookings">My Bookings</NavLink></span>
-                                    <span><NavLink className="me-3 text-warning text-decoration-none fw-bold" to="/manageBookings">Manage Bookings</NavLink></span>
+                                    <span><NavLink className="me-3 text-warning text-decoration-none fw-bold" to="/manageAllRooms">Manage Rooms</NavLink></span>
+                                    <span><NavLink className="me-3 text-warning text-decoration-none fw-bold" to="/addRoom">Add Room</NavLink></span>
                                     <button className="btn btn-success border me-2" onClick={ logout }>Log out: <span className="fw-bold text-light">{ user?.email }</span></button>
                                 </div>
                         }
