@@ -5,7 +5,7 @@ import Room from '../Rooms/Room/Room';
 
 const PremiumRooms = () => {
     const [ rooms ] = useRooms();
-    const premiumRooms = rooms.filter( room => room.premium === true );
+    const premiumRooms = rooms.filter( room => room.premium === "true" );
     console.log( premiumRooms );
 
     return (

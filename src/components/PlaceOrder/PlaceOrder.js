@@ -9,7 +9,11 @@ const PlaceOrder = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const { user } = useAuth();
     const navigation = useHistory();
-    const onSubmit = data => console.log( data );
+
+    const onSubmit = data => {
+        console.log( data )
+    };
+
     console.log( watch( "order" ) );
 
     return (
@@ -38,12 +42,13 @@ const PlaceOrder = () => {
                         <input placeholder="Phone Number" { ...register( "phone", { required: true } ) } />
                         <br />
                         <br />
+                        {/* errors will return when field validation fails  */ }
+                        { errors.address && <span className="text-danger fw-bold">This field is required</span> }
+                        <br />
+                        <br />
                         <Button className="btn btn-danger me-3" onClick={ () => navigation.goBack() }>Go Back</Button>
                         <input type="submit" className="btn btn-success" />
-                        <br />
-                        <br />
-                        {/* errors will return when field validation fails  */ }
-                        { errors.exampleRequired && <span className="text-danger fw-bold">This field is required</span> }
+
                     </form>
                 </Col>
             </Row>
