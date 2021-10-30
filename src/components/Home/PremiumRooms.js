@@ -2,11 +2,17 @@ import React from 'react';
 import { Row } from 'react-bootstrap';
 import useRooms from '../../Hooks/useRooms';
 import Room from '../Rooms/Room/Room';
+import { Spinner } from 'react-bootstrap';
+import useAuth from '../../Hooks/useAuth';
 
 const PremiumRooms = () => {
     const [ rooms ] = useRooms();
+    const { isLoading } = useAuth();
     const premiumRooms = rooms.filter( room => room.premium === "true" );
-    console.log( premiumRooms );
+
+    if ( isLoading ) {
+        return <div className="text-center my-5"><Spinner animation="border" variant="danger" /></div>
+    }
 
     return (
         <Row className="container mx-auto my-5">
