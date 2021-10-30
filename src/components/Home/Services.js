@@ -12,7 +12,7 @@ import airportTaxi from '../../images/services/airport-taxi.png';
 const Services = () => {
     return (
         <div className="container my-5">
-            <h1 className="text-center fw-bold text-dark mb-5">Our Services</h1>
+            <h1 className="text-center fw-bold text-dark mb-5">Our Facilities</h1>
             <Row className="mb-3">
                 <Col xs={ 12 } sm={ 12 } md={ 3 } lg={ 3 }>
                     <div className="text-center">

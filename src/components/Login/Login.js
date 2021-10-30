@@ -2,10 +2,20 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import loginImage from '../../images/login.jpg';
 import useAuth from '../../Hooks/useAuth';
+import { useHistory, useLocation } from "react-router-dom";
+
 
 //component for login section
 const Login = () => {
     const { signInUsingGoogle, error } = useAuth();
+    const navigation = useHistory();
+    const location = useLocation();
+
+    const signInWithRedirect = () => {
+        const { from } = location.state || { from: { pathname: "/" } };
+        signInUsingGoogle();
+        navigation.replace( from );
+    }
 
     //UI rendering
     return (
@@ -18,7 +28,7 @@ const Login = () => {
                     <div className="container mt-5">
                         <h3 className="text-primary fw-bold">Please Login with Your Google Account</h3>
                         <hr className="text-danger" />
-                        <button onClick={ signInUsingGoogle } className="my-3 btn btn-success px-5 py-3"> Login With Google</button>
+                        <button onClick={ signInWithRedirect } className="my-3 btn btn-success px-5 py-3"> Login With Google</button>
                         <hr className="text-danger" />
                         {
                             !error ? <div className="row mt-3 text-danger">{ error }</div> : <div className="row mt-3 text-success">Logout Successful</div>
