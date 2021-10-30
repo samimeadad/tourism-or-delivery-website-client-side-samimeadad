@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <header className="header bg-dark">
-            <Navbar collapseOnSelect expand="lg" className="nav navbar py-5 px-5" bg="light" variant="dark">
+            <Navbar collapseOnSelect expand="lg" className="nav navbar py-5 px-5" bg="dark" variant="dark">
                 {/* Brand Logo */ }
                 <Navbar.Brand>
                     <NavLink to="/home" className="me-5">
@@ -24,14 +24,14 @@ const Header = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     {/* menu bar and primary route button */ }
                     <Nav className="me-auto">
-                        <NavLink className="me-3 text-primary text-decoration-none" to="/home"><FontAwesomeIcon icon={ faHome } /></NavLink>
-                        <NavLink className="me-3 text-dark text-decoration-none" to="/about">About Us</NavLink>
-                        <NavLink className="me-3 text-dark text-decoration-none" to="/rooms">Rooms & Suits</NavLink>
-                        <NavLink className="me-3 text-dark text-decoration-none" to="/facilities">Facilities & Services</NavLink>
-                        <NavLink className="me-3 text-dark text-decoration-none" to="/restaurants">Restaurants</NavLink>
-                        <NavLink className="me-3 text-dark text-decoration-none" to="/events">Excursion & Events</NavLink>
-                        <NavLink className="me-3 text-dark text-decoration-none" to="/gallery">Gallery</NavLink>
-                        <NavLink className="me-3 text-dark text-decoration-none" to="/contact">Contact Us</NavLink>
+                        <NavLink className="me-3 text-warning text-decoration-none" to="/home"><FontAwesomeIcon icon={ faHome } /></NavLink>
+                        <NavLink className="me-3 text-light text-decoration-none" to="/about">About Us</NavLink>
+                        <NavLink className="me-3 text-light text-decoration-none" to="/rooms">Rooms & Suits</NavLink>
+                        <NavLink className="me-3 text-light text-decoration-none" to="/facilities">Facilities & Services</NavLink>
+                        <NavLink className="me-3 text-light text-decoration-none" to="/restaurants">Restaurants</NavLink>
+                        <NavLink className="me-3 text-light text-decoration-none" to="/events">Excursion & Events</NavLink>
+                        <NavLink className="me-3 text-light text-decoration-none" to="/gallery">Gallery</NavLink>
+                        <NavLink className="me-3 text-light text-decoration-none" to="/contact">Contact Us</NavLink>
                     </Nav>
 
                     {/* login and signup section with conditional rendering*/ }

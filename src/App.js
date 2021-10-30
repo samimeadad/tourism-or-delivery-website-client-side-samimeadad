@@ -15,6 +15,7 @@ import Gallery from './components/Gallery/Gallery';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PrivateRoom from './components/Rooms/Room/PrivateRoom';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 require( 'dotenv' ).config();
 
 function App () {
@@ -38,6 +39,9 @@ function App () {
             </Route>
             <PrivateRoute exact path="/room/:roomId">
               <PrivateRoom></PrivateRoom>
+            </PrivateRoute>
+            <PrivateRoute exact path="/placeOrder">
+              <PlaceOrder></PlaceOrder>
             </PrivateRoute>
             <Route exact path="/facilities">
               <Facilities></Facilities>

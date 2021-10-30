@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import useRooms from '../../../Hooks/useRooms';
 
 const PrivateRoom = () => {
@@ -24,8 +25,9 @@ const PrivateRoom = () => {
                         <hr className="text-secondary" />
                     </Card.Text>
                 </Card.Body>
-                <Card.Footer className="d-flex justify-content-between">
-                    <Button className="btn btn-danger" onClick={ () => navigation.goBack() }>Go Back</Button>
+                <Card.Footer>
+                    <Button className="btn btn-danger me-3" onClick={ () => navigation.goBack() }>Go Back</Button>
+                    <Link to="/placeOrder"><Button className="btn btn-success">Place Order</Button></Link>
                 </Card.Footer>
             </Card>
 
