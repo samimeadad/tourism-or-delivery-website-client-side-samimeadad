@@ -40,6 +40,7 @@ const MyBookings = () => {
                             <th>Guest Name</th>
                             <th>Guest Email</th>
                             <th>Room Type</th>
+                            <th>Current Status</th>
                             <th>Remove Booking</th>
                         </tr>
                     </thead>
@@ -49,6 +50,7 @@ const MyBookings = () => {
                                 <td>{ booking.name }</td>
                                 <td>{ booking.email }</td>
                                 <td>{ booking.roomType }</td>
+                                <td>{ booking.status }</td>
                                 <td><Button onClick={ () => handleDeleteBooking( booking._id ) } className="btn btn-danger ms-3"><FontAwesomeIcon icon={ faTrash } /></Button></td>
                             </tr> )
                         }

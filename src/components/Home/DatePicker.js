@@ -12,13 +12,13 @@ const DatePicker = () => {
 
             <Form className="d-flex justify-content-around" onSubmit={ handleCheckAvailability }>
                 <Row>
-                    <Col xs={ 12 } sm={ 12 } md={ 2 } lg={ 2 }>
+                    <Col xs={ 12 } sm={ 12 } md={ 3 } lg={ 3 }>
                         <div>
                             <Form.Label className="fw-bold">Check-In</Form.Label>
                             <Form.Control type="date" />
                         </div>
                     </Col>
-                    <Col xs={ 12 } sm={ 12 } md={ 2 } lg={ 2 }>
+                    <Col xs={ 12 } sm={ 12 } md={ 3 } lg={ 3 }>
                         <div>
                             <Form.Label className="fw-bold">Check-Out</Form.Label>
                             <Form.Control type="date" />
@@ -57,7 +57,7 @@ const DatePicker = () => {
                             </Form.Select>
                         </div>
                     </Col>
-                    <Col xs={ 12 } sm={ 12 } md={ 4 } lg={ 4 }>
+                    <Col xs={ 12 } sm={ 12 } md={ 2 } lg={ 2 }>
                         <input type="submit" value="Check Availability" className="btn btn-primary mt-4" />
                     </Col>
                 </Row>

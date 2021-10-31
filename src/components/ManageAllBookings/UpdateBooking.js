@@ -31,9 +31,10 @@ const UpdateBooking = () => {
 
     return (
         <div className="text-center my-5">
-            <h2>Please Update the Booking Status for <span className="text-primary">{ selectedBooking?.name }</span></h2>
+            <h2 className="fw-bold text-primary">Guest Name: <span className="text-danger">{ selectedBooking?.name }</span></h2>
+            <p className="fw-bold text-primary">Guest Name: <span className="text-danger">{ selectedBooking?.roomType }</span></p>
             <form onSubmit={ handleSubmit( onSubmit ) }>
-                <input defaultValue={ selectedBooking?.status } type="text" { ...register( "status", { required: true } ) } />
+                <input placeholder="pending" defaultValue={ selectedBooking?.status } type="text" { ...register( "status", { required: true } ) } />
                 <br /><br />
                 <Button className="btn btn-danger me-3" onClick={ () => navigation.goBack() }>Go Back</Button>
                 <input className="btn btn-success" type="submit" />

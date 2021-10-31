@@ -29,7 +29,7 @@ const ManageAllBookings = () => {
     }
 
     return (
-        <div className="text-center my-5 w-50 mx-auto">
+        <div className="text-center my-5 w-75 mx-auto">
             <h1 className="text-primary mb-5">Manage All Bookings Here</h1>
             <div>
                 <Table striped bordered responsive>
@@ -38,6 +38,7 @@ const ManageAllBookings = () => {
                             <th>Guest Name</th>
                             <th>Guest Email</th>
                             <th>Room Type</th>
+                            <th>Current Status</th>
                             <th>Edit Status</th>
                             <th>Remove Booking</th>
                         </tr>
@@ -48,6 +49,7 @@ const ManageAllBookings = () => {
                                 <td>{ booking.name }</td>
                                 <td>{ booking.email }</td>
                                 <td>{ booking.roomType }</td>
+                                <td>{ booking.status }</td>
                                 <td><Link to={ `/bookings/update/${ booking._id }` }><Button className="btn btn-success ms-3"><FontAwesomeIcon icon={ faEdit } /></Button></Link></td>
                                 <td><Button onClick={ () => handleDeleteBooking( booking._id ) } className="btn btn-danger ms-3"><FontAwesomeIcon icon={ faTrash } /></Button></td>
                             </tr> )

@@ -29,8 +29,6 @@ const AddRoom = () => {
                 <br /><br />
                 <input type="text" { ...register( "premium", { required: true } ) } placeholder="Premium or Not: True/False" className="w-50" />
                 <br /><br />
-                <input type="text" { ...register( "status", { required: true } ) } placeholder="Pending/Approved" className="w-50" />
-                <br /><br />
                 <input { ...register( "img" ) } placeholder="Image URL" className="w-50" />
                 <br /><br />
                 <input className="btn btn-danger" type="submit" />

@@ -40,7 +40,7 @@ const Header = () => {
                                     <span><NavLink className="me-3 text-warning text-decoration-none fw-bold" to="/manageAllBookings">Manage Bookings</NavLink></span>
                                     <span><NavLink className="me-3 text-warning text-decoration-none fw-bold" to="/manageAllRooms">Manage Rooms</NavLink></span>
                                     <span><NavLink className="me-3 text-warning text-decoration-none fw-bold" to="/addRoom">Add Room</NavLink></span>
-                                    <button className="btn btn-success border me-2" onClick={ logout }>Log out: <span className="fw-bold text-light">{ user?.email }</span></button>
+                                    <button className="btn btn-success border me-2" onClick={ logout }>Log out: <span className="fw-bold text-light">{ user?.displayName }</span></button>
                                 </div>
                         }
                     </Nav>

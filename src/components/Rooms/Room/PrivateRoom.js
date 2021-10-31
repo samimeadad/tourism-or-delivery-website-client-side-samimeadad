@@ -49,10 +49,10 @@ const PrivateRoom = () => {
 
                     <form onSubmit={ handleSubmit( onSubmit ) } className="mx-5">
                         <p className="fw-bold text-danger">Please submit the below form to confirm the booking</p>
-                        <input type="text" defaultValue={ selectedRoom?.type } { ...register( "roomType", { required: true } ) } />
+                        <input placeholder="Room Type" type="text" { ...register( "roomType", { required: true } ) } />
                         <br />
                         <br />
-                        <input type="text" defaultValue={ selectedRoom?.price } { ...register( "roomPrice", { required: true } ) } />
+                        <input placeholder="Room Cost" type="text" { ...register( "roomPrice", { required: true } ) } />
                         <br />
                         <br />
                         <input type="text" defaultValue={ user?.displayName } { ...register( "name", { required: true } ) } />
