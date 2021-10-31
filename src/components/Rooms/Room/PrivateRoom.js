@@ -8,18 +8,19 @@ import axios from 'axios';
 
 const PrivateRoom = () => {
     const { roomId } = useParams();
-    console.log( roomId );
     const [ rooms ] = useRooms();
     const { user } = useAuth();
+
     const selectedRoom = rooms.find( room => room._id === roomId );
     const navigation = useHistory();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = async data => {
+        console.log( data );
         await axios.post( 'https://guarded-peak-27154.herokuapp.com/bookings', data )
             .then( res => {
                 if ( res.data.insertedId ) {
-                    alert( 'Booking Data Added' );
+                    alert( 'Your booking is confirmed' );
                     reset();
                 }
             } )
@@ -27,7 +28,7 @@ const PrivateRoom = () => {
 
     return (
         <div className="container my-5">
-            <h1 className="text-dark my-5"><span className="text-danger fw-bold">{ selectedRoom?.type }:</span> Detail Room Overview & Place Order</h1>
+            <h1 className="text-dark my-5"><span className="text-danger fw-bold">{ selectedRoom?.type }:</span> <span className="text-primary fw-bold">Detail Room Overview & Place Order</span></h1>
             <Row className="gx-5">
                 <Col xs={ 12 } sm={ 12 } md={ 8 } lg={ 8 }>
                     <Card className="px-5 py-2">
@@ -45,27 +46,28 @@ const PrivateRoom = () => {
                     </Card>
                 </Col>
                 <Col xs={ 12 } sm={ 12 } md={ 4 } lg={ 4 }>
+
                     <form onSubmit={ handleSubmit( onSubmit ) } className="mx-5">
                         <p className="fw-bold text-danger">Please submit the below form to confirm the booking</p>
-                        <input defaultValue={ selectedRoom?.type } { ...register( "roomType" ) } />
+                        <input type="text" defaultValue={ selectedRoom?.type } { ...register( "roomType", { required: true } ) } />
                         <br />
                         <br />
-                        <input defaultValue={ selectedRoom?.price } { ...register( "roomPrice" ) } />
+                        <input type="text" defaultValue={ selectedRoom?.price } { ...register( "roomPrice", { required: true } ) } />
                         <br />
                         <br />
-                        <input defaultValue={ user?.displayName } { ...register( "name" ) } />
+                        <input type="text" defaultValue={ user?.displayName } { ...register( "name", { required: true } ) } />
                         <br />
                         <br />
-                        <input defaultValue={ user?.email } { ...register( "email", { required: true } ) } />
+                        <input type="email" defaultValue={ user?.email } { ...register( "email", { required: true } ) } />
                         <br />
                         <br />
-                        <input placeholder="Address" { ...register( "address", { required: true } ) } />
+                        <input type="text" placeholder="Address" { ...register( "address", { required: true } ) } />
                         <br />
                         <br />
-                        <input placeholder="National ID" { ...register( "nid", { required: true } ) } />
+                        <input type="text" placeholder="National ID" { ...register( "nid", { required: true } ) } />
                         <br />
                         <br />
-                        <input placeholder="Phone Number" { ...register( "phone", { required: true } ) } />
+                        <input type="text" placeholder="Phone Number" { ...register( "phone", { required: true } ) } />
                         <br />
                         {/* errors will return when field validation fails  */ }
                         { errors.address && <span className="text-danger fw-bold">This field is required</span> }
