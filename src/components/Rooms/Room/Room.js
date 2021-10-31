@@ -3,7 +3,7 @@ import { Button, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Room = ( props ) => {
-    const { key, type, description, price, image } = props.room;
+    const { _id, type, description, price, image } = props.room;
 
     return (
         // div for each column
@@ -19,7 +19,7 @@ const Room = ( props ) => {
                     <hr />
                     <h4 className="card-text text-danger fw-bold">BDT. { price }</h4>
                     <hr />
-                    <Link to={ `/room/${ key }` }><Button className="btn btn-primary">Book Now</Button></Link>
+                    <Link to={ `/room/${ _id }` }><Button className="btn btn-primary">Book Now</Button></Link>
                 </div>
             </div>
         </Col>

@@ -8,9 +8,10 @@ import axios from 'axios';
 
 const PrivateRoom = () => {
     const { roomId } = useParams();
+    console.log( roomId );
     const [ rooms ] = useRooms();
     const { user } = useAuth();
-    const privateRoom = rooms.find( room => roomId === room.key );
+    const selectedRoom = rooms.find( room => room._id === roomId );
     const navigation = useHistory();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
@@ -26,18 +27,18 @@ const PrivateRoom = () => {
 
     return (
         <div className="container my-5">
-            <h1 className="text-dark my-5"><span className="text-danger fw-bold">{ privateRoom?.type }:</span> Detail Room Overview & Place Order</h1>
+            <h1 className="text-dark my-5"><span className="text-danger fw-bold">{ selectedRoom?.type }:</span> Detail Room Overview & Place Order</h1>
             <Row className="gx-5">
                 <Col xs={ 12 } sm={ 12 } md={ 8 } lg={ 8 }>
                     <Card className="px-5 py-2">
-                        <Card.Img variant="top" src={ privateRoom?.image } className="img-fluid" style={ { width: '400px' } } />
+                        <Card.Img variant="top" src={ selectedRoom?.image } className="img-fluid" style={ { width: '400px' } } />
                         <Card.Body>
-                            <Card.Title className="fs-2">{ privateRoom?.type }</Card.Title>
+                            <Card.Title className="fs-2">{ selectedRoom?.type }</Card.Title>
                             <hr className="text-secondary" />
                             <Card.Text>
-                                <p>{ privateRoom?.description }</p>
+                                <p>{ selectedRoom?.description }</p>
                                 <hr className="text-secondary" />
-                                <p><b>Room Cost:</b> BDT. { privateRoom?.price }</p>
+                                <p><b>Room Cost:</b> BDT. { selectedRoom?.price }</p>
                                 <hr className="text-secondary" />
                             </Card.Text>
                         </Card.Body>
@@ -46,11 +47,15 @@ const PrivateRoom = () => {
                 <Col xs={ 12 } sm={ 12 } md={ 4 } lg={ 4 }>
                     <form onSubmit={ handleSubmit( onSubmit ) } className="mx-5">
                         <p className="fw-bold text-danger">Please submit the below form to confirm the booking</p>
-                        {/* register your input into the hook by invoking the "register" function */ }
+                        <input defaultValue={ selectedRoom?.type } { ...register( "roomType" ) } />
+                        <br />
+                        <br />
+                        <input defaultValue={ selectedRoom?.price } { ...register( "roomPrice" ) } />
+                        <br />
+                        <br />
                         <input defaultValue={ user?.displayName } { ...register( "name" ) } />
                         <br />
                         <br />
-                        {/* include validation with required or other standard HTML validation rules */ }
                         <input defaultValue={ user?.email } { ...register( "email", { required: true } ) } />
                         <br />
                         <br />
