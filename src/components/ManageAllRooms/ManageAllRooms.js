@@ -42,7 +42,7 @@ const ManageAllRooms = () => {
                     </thead>
                     <tbody>
                         {
-                            rooms.map( room => <tr>
+                            rooms.map( room => <tr key={ room._id } >
                                 <td>{ room.type }</td>
                                 <td><Link to={ `/rooms/update/${ room._id }` }><Button className="btn btn-success ms-3"><FontAwesomeIcon icon={ faEdit } /></Button></Link></td>
                                 <td><Button onClick={ () => handleDeleteRoom( room._id ) } className="btn btn-danger ms-3"><FontAwesomeIcon icon={ faTrash } /></Button></td>
@@ -52,7 +52,7 @@ const ManageAllRooms = () => {
                     </tbody>
                 </Table>
             </div>
-        </div>
+        </div >
     );
 };
 

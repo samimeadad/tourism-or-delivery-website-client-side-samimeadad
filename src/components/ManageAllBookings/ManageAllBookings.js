@@ -44,7 +44,7 @@ const ManageAllBookings = () => {
                     </thead>
                     <tbody>
                         {
-                            bookings.map( booking => <tr>
+                            bookings.map( booking => <tr key={ booking._id } >
                                 <td>{ booking.name }</td>
                                 <td>{ booking.email }</td>
                                 <td>{ booking.roomType }</td>
@@ -56,7 +56,7 @@ const ManageAllBookings = () => {
                     </tbody>
                 </Table>
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -45,7 +45,7 @@ const MyBookings = () => {
                     </thead>
                     <tbody>
                         {
-                            userAllBookings.map( booking => <tr>
+                            userAllBookings.map( booking => <tr key={ booking._id }>
                                 <td>{ booking.name }</td>
                                 <td>{ booking.email }</td>
                                 <td>{ booking.roomType }</td>
