@@ -27,7 +27,6 @@ const Header = () => {
                         <NavLink className="me-3 text-warning text-decoration-none" to="/home"><FontAwesomeIcon icon={ faHome } /></NavLink>
                         <NavLink className="me-3 text-light text-decoration-none" to="/about">About Us</NavLink>
                         <NavLink className="me-3 text-light text-decoration-none" to="/rooms">Rooms & Suits</NavLink>
-                        <NavLink className="me-3 text-light text-decoration-none" to="/facilities">Facilities & Services</NavLink>
                         <NavLink className="me-3 text-light text-decoration-none" to="/gallery">Gallery</NavLink>
                         <NavLink className="me-3 text-light text-decoration-none" to="/contact">Contact Us</NavLink>
                     </Nav>
