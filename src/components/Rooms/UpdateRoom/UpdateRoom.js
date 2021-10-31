@@ -7,8 +7,8 @@ import { Button } from 'react-bootstrap';
 const UpdateRoom = () => {
     const { register, handleSubmit } = useForm();
     const { roomId } = useParams();
-    const navigation = useHistory();
     const [ rooms ] = useRooms();
+    const navigation = useHistory();
     const selectedRoom = rooms.find( room => room._id === roomId );
 
 
@@ -35,7 +35,14 @@ const UpdateRoom = () => {
         <div className="text-center my-5">
             <h2>Please Update the Room Status for <span className="text-primary">{ selectedRoom?.type }</span></h2>
             <form onSubmit={ handleSubmit( onSubmit ) }>
-                <input defaultValue={ selectedRoom?.status } type="text" { ...register( "status", { required: true } ) } />
+                <label className="text-primary fw-bold me-3" htmlFor="type">Room Type: </label>
+                <input defaultValue={ selectedRoom?.type } type="text" { ...register( "type", { required: true } ) } />
+                <br /><br />
+                <label className="text-primary fw-bold me-3" htmlFor="type">Description: </label>
+                <input defaultValue={ selectedRoom?.description } type="text" { ...register( "description", { required: true } ) } />
+                <br /><br />
+                <label className="text-primary fw-bold me-3" htmlFor="type">Room Fare: </label>
+                <input defaultValue={ selectedRoom?.price } type="text" { ...register( "price", { required: true } ) } />
                 <br /><br />
                 <Button className="btn btn-danger me-3" onClick={ () => navigation.goBack() }>Go Back</Button>
                 <input className="btn btn-success" type="submit" />

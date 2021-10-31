@@ -36,8 +36,8 @@ const ManageAllRooms = () => {
                     <thead>
                         <tr>
                             <th>Room Type</th>
-                            <th>Edit the Status</th>
-                            <th>Remove the Room</th>
+                            <th>Edit Room Details</th>
+                            <th>Remove Room</th>
                         </tr>
                     </thead>
                     <tbody>

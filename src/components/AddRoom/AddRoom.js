@@ -17,21 +17,21 @@ const AddRoom = () => {
 
     return (
         <div className="text-center mx-auto my-5">
-            <h2>Please Add a Service</h2>
+            <h2 className="text-primary fw-bold my-5">Please Input a Room Detail Below and Submit to Add</h2>
             <form onSubmit={ handleSubmit( onSubmit ) }>
-                <input type="number" { ...register( "key", { required: true } ) } placeholder="Key Identity" />
+                <input type="text" { ...register( "key", { required: true } ) } placeholder="Key Identity (Number)" className="w-50" />
                 <br /><br />
-                <input type="text" { ...register( "type", { required: true, maxLength: 20 } ) } placeholder="Room Type" />
+                <input type="text" { ...register( "type", { required: true, maxLength: 20 } ) } placeholder="Room Type" className="w-50" />
                 <br /><br />
-                <textarea { ...register( "description", { required: true } ) } placeholder="Description" col="5" row="10" />
+                <textarea { ...register( "description", { required: true } ) } placeholder="Description" className="w-50" />
                 <br /><br />
-                <input type="number" { ...register( "price", { required: true } ) } placeholder="Price" />
+                <input type="text" { ...register( "price", { required: true } ) } placeholder="Price" className="w-50" />
                 <br /><br />
-                <input type="text" { ...register( "premium", { required: true } ) } placeholder="Premium or Not: True/False" />
+                <input type="text" { ...register( "premium", { required: true } ) } placeholder="Premium or Not: True/False" className="w-50" />
                 <br /><br />
-                <input type="text" { ...register( "status", { required: true } ) } placeholder="Pending/Approved" />
+                <input type="text" { ...register( "status", { required: true } ) } placeholder="Pending/Approved" className="w-50" />
                 <br /><br />
-                <input { ...register( "img" ) } placeholder="Image URL" />
+                <input { ...register( "img" ) } placeholder="Image URL" className="w-50" />
                 <br /><br />
                 <input className="btn btn-danger" type="submit" />
             </form>
