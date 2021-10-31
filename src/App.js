@@ -21,6 +21,8 @@ import UpdateBooking from './components/ManageAllBookings/UpdateBooking';
 
 require( 'dotenv' ).config();
 
+
+//all router, switch and routes
 function App () {
   return (
     <div>

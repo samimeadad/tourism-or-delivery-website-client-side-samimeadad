@@ -9,6 +9,7 @@ import cleaningEverday from '../../images/services/cleaning-everyday.png';
 import buffetBreakfast from '../../images/services/buffet-breakfast.png';
 import airportTaxi from '../../images/services/airport-taxi.png';
 
+//services section of home page
 const Services = () => {
     return (
         <div className="container my-5">

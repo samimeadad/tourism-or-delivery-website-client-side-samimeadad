@@ -6,7 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import useAuth from '../../Hooks/useAuth';
 
+//rendering for header/navbar
 const Header = () => {
+    //import user and logout from the context api
     const { user, logout } = useAuth();
 
     return (
@@ -31,7 +33,7 @@ const Header = () => {
                         <NavLink className="me-3 text-light text-decoration-none" to="/contact">Contact Us</NavLink>
                     </Nav>
 
-                    {/* login and signup section with conditional rendering*/ }
+                    {/* login and other menu section with conditional rendering*/ }
                     <Nav className="p-3">
                         {
                             !user.email ? <span><NavLink className="me-3 text-primary text-decoration-none fw-bold" to="/login">Please Login Here <FontAwesomeIcon icon={ faSignInAlt } /></NavLink></span> :

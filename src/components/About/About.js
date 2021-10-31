@@ -1,5 +1,6 @@
 import React from 'react';
 
+//about page
 const About = () => {
     return (
         <div className="container my-5">

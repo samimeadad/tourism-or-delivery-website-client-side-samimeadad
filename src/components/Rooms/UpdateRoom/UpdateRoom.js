@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import useRooms from '../../../Hooks/useRooms';
 import { Button } from 'react-bootstrap';
 
+//Update a room's details like Room type, description, and price
 const UpdateRoom = () => {
     const { register, handleSubmit } = useForm();
     const { roomId } = useParams();

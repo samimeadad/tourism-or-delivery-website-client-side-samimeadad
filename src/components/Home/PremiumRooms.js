@@ -5,6 +5,7 @@ import Room from '../Rooms/Room/Room';
 import { Spinner } from 'react-bootstrap';
 import useAuth from '../../Hooks/useAuth';
 
+//premium rooms section. the data has been picked as per a room properties premium with filter method
 const PremiumRooms = () => {
     const [ rooms ] = useRooms();
     const { isLoading } = useAuth();

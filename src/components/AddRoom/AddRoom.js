@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
 
+
+//Add room functionality with react hook form and axios API
 const AddRoom = () => {
     const { register, handleSubmit, reset } = useForm();
 

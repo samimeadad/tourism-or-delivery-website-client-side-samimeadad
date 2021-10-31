@@ -6,6 +6,7 @@ const DatePicker = () => {
         e.preventDefault();
     }
 
+    //date picker for potential guests
     return (
         <div className="container my-5 overflow-hidden">
             <hr />

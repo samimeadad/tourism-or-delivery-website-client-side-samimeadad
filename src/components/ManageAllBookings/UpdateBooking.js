@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { Button } from 'react-bootstrap';
 import useBookings from '../../Hooks/useBookings';
 
+
+//update the booking status to approved.
 const UpdateBooking = () => {
     const { register, handleSubmit } = useForm();
     const { bookingId } = useParams();

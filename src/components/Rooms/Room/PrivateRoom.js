@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import useAuth from '../../../Hooks/useAuth';
 import axios from 'axios';
 
+//protected room page after user login. here a user can place his/her booking after select the room
 const PrivateRoom = () => {
     const { roomId } = useParams();
     const [ rooms ] = useRooms();
