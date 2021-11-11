@@ -61,13 +61,13 @@ const Footer = () => {
             </div>
             <div className="mt-5 text-center text-primary">
                 <div className="mb-5 text-warning w-25 mx-auto">
-                    <span><i class="fas fa-tty me-3"></i>+88 09610 999 999</span>
+                    <span><i className="fas fa-tty me-3"></i>+88 09610 999 999</span>
                     <br />
-                    <span><i class="fas fa-mobile-alt me-3"></i>+880 1711 000000</span>
+                    <span><i className="fas fa-mobile-alt me-3"></i>+880 1711 000000</span>
                     <br />
-                    <span><i class="fab fa-whatsapp me-3"></i>+880 1711 000000</span>
+                    <span><i className="fab fa-whatsapp me-3"></i>+880 1711 000000</span>
                     <br />
-                    <span><i class="far fa-envelope me-3"></i>contact@hotelbayview.com</span>
+                    <span><i className="far fa-envelope me-3"></i>contact@hotelbayview.com</span>
                     <br />
                 </div>
                 <div>

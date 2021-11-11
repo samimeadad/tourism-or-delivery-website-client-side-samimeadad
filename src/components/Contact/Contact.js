@@ -5,7 +5,12 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
 
+//Contact Us page
 const Contact = () => {
+    const onSubmit = e => {
+        e.preventDefault();
+    }
+
     return (
         <div className="my-5 container">
             <Row>
@@ -43,7 +48,7 @@ const Contact = () => {
                                     style={ { height: '100px' } }
                                 />
                             </Form.Group>
-                            <Button variant="primary" type="submit">
+                            <Button onClick={ onSubmit } variant="primary" type="submit">
                                 Submit
                             </Button>
                         </Form>

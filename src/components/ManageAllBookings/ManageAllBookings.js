@@ -1,14 +1,12 @@
 import React from 'react';
 import { Button, Table } from 'react-bootstrap';
-import useAuth from '../../Hooks/useAuth';
-import useBookings from '../../Hooks/useBookings';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import useBookings from '../../Hooks/useBookings';
 
-const MyBookings = () => {
-    const { user } = useAuth();
+const ManageAllBookings = () => {
     const [ bookings, setBookings ] = useBookings();
-    const userAllBookings = bookings.filter( booking => booking?.email === user?.email )
 
     //DELETE a Booking
     const handleDeleteBooking = id => {
@@ -31,8 +29,8 @@ const MyBookings = () => {
     }
 
     return (
-        <div className="text-center my-5 w-50 mx-auto">
-            <h1 className="text-primary fw-bold mb-5">Bookings for <span className="text-danger">{ user?.displayName }</span></h1>
+        <div className="text-center my-5 w-75 mx-auto">
+            <h1 className="text-primary mb-5">Manage All Bookings Here</h1>
             <div>
                 <Table striped bordered responsive>
                     <thead>
@@ -41,16 +39,18 @@ const MyBookings = () => {
                             <th>Guest Email</th>
                             <th>Room Type</th>
                             <th>Current Status</th>
+                            <th>Edit Status</th>
                             <th>Remove Booking</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            userAllBookings.map( booking => <tr key={ booking._id }>
+                            bookings.map( booking => <tr key={ booking._id } >
                                 <td>{ booking.name }</td>
                                 <td>{ booking.email }</td>
                                 <td>{ booking.roomType }</td>
                                 <td>{ booking.status }</td>
+                                <td><Link to={ `/bookings/update/${ booking._id }` }><Button className="btn btn-success ms-3"><FontAwesomeIcon icon={ faEdit } /></Button></Link></td>
                                 <td><Button onClick={ () => handleDeleteBooking( booking._id ) } className="btn btn-danger ms-3"><FontAwesomeIcon icon={ faTrash } /></Button></td>
                             </tr> )
                         }
@@ -62,4 +62,4 @@ const MyBookings = () => {
     );
 };
 
-export default MyBookings;
+export default ManageAllBookings;

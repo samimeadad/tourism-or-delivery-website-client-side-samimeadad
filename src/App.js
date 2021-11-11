@@ -16,9 +16,13 @@ import MyBookings from './components/MyBookings/MyBookings';
 import ManageAllRooms from './components/ManageAllRooms/ManageAllRooms';
 import AddRoom from './components/AddRoom/AddRoom';
 import UpdateRoom from './components/Rooms/UpdateRoom/UpdateRoom';
+import ManageAllBookings from './components/ManageAllBookings/ManageAllBookings';
+import UpdateBooking from './components/ManageAllBookings/UpdateBooking';
 
 require( 'dotenv' ).config();
 
+
+//all router, switch and routes
 function App () {
   return (
     <div>
@@ -44,6 +48,9 @@ function App () {
             <PrivateRoute exact path="/myBookings">
               <MyBookings></MyBookings>
             </PrivateRoute>
+            <PrivateRoute exact path="/manageAllBookings">
+              <ManageAllBookings></ManageAllBookings>
+            </PrivateRoute>
             <PrivateRoute exact path="/manageAllRooms">
               <ManageAllRooms></ManageAllRooms>
             </PrivateRoute>
@@ -52,6 +59,9 @@ function App () {
             </PrivateRoute>
             <PrivateRoute path="/rooms/update/:roomId">
               <UpdateRoom></UpdateRoom>
+            </PrivateRoute>
+            <PrivateRoute path="/bookings/update/:bookingId">
+              <UpdateBooking></UpdateBooking>
             </PrivateRoute>
             <Route exact path="/gallery">
               <Gallery></Gallery>

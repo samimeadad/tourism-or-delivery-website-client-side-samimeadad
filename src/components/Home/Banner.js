@@ -6,6 +6,7 @@ import banner3 from '../../images/banner/3.png';
 import banner4 from '../../images/banner/4.png';
 import banner5 from '../../images/banner/5.png';
 
+//top banner section of home page designed with carousel
 const Banner = () => {
     return (
         <div>

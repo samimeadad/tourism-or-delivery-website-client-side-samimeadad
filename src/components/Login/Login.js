@@ -11,13 +11,14 @@ const Login = () => {
     const navigation = useHistory();
     const location = useLocation();
 
+    //Google Login functionality
     const signInWithRedirect = () => {
         const { from } = location.state || { from: { pathname: "/" } };
         signInUsingGoogle();
         navigation.replace( from );
     }
 
-    //UI rendering
+    //UI rendering for login page and form
     return (
         <div className="container mx-auto mb-5">
             <Row className="text-center">

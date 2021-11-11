@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button, Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -35,13 +36,13 @@ const ManageAllRooms = () => {
                     <thead>
                         <tr>
                             <th>Room Type</th>
-                            <th>Edit the Status</th>
-                            <th>Remove the Room</th>
+                            <th>Edit Room Details</th>
+                            <th>Remove Room</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            rooms.map( room => <tr>
+                            rooms.map( room => <tr key={ room._id } >
                                 <td>{ room.type }</td>
                                 <td><Link to={ `/rooms/update/${ room._id }` }><Button className="btn btn-success ms-3"><FontAwesomeIcon icon={ faEdit } /></Button></Link></td>
                                 <td><Button onClick={ () => handleDeleteRoom( room._id ) } className="btn btn-danger ms-3"><FontAwesomeIcon icon={ faTrash } /></Button></td>
@@ -51,7 +52,7 @@ const ManageAllRooms = () => {
                     </tbody>
                 </Table>
             </div>
-        </div>
+        </div >
     );
 };
 

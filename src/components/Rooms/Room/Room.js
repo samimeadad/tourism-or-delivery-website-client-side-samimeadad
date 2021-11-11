@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+//Rooms and Suit page
 const Room = ( props ) => {
     const { _id, type, description, price, image } = props.room;
 

@@ -1,9 +1,10 @@
 import React from 'react';
 
+//about page
 const About = () => {
     return (
         <div className="container my-5">
-            <h1 className="mb-5 text-center text-primary fw-bold">About Bayview</h1>
+            <h1 className="mb-5 text-center text-primary fw-bold">About Bay View</h1>
             <hr />
             <p className="fs-5">
                 Bayview Hotel & Resort is a privately owned 5 Star Standard Luxury Hotel & Resort in Cox's Bazar, Bangladesh. It is situated in an attractive location of Marine Drive Road, Cox's Bazar. It is a place of choice of most of the corporate executives, foreigners, newly married couples, and for those who prefer to stay in luxury with stunning view of The 'Bay of Bengal'. <br /><br />

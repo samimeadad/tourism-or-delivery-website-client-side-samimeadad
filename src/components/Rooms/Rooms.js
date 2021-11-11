@@ -3,6 +3,7 @@ import { Row } from 'react-bootstrap';
 import useRooms from '../../Hooks/useRooms';
 import Room from './Room/Room';
 
+//all rooms (rooms and suits page)
 const Rooms = () => {
     const [ rooms ] = useRooms();
 
